@@ -3,19 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>How to Contact Me</title>
   </head>
   <body>
     <header>
       <h1>Naomi's Portfolio</h1>
       <nav>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
       </nav>
     </header>
     <h2>How to Contact Me</h2>
-    
+    <form action="" method="POST" onSubmit="onSubmit(event)">
+      <input type="text" name="name" placeholder="Name" required />
+      <input type="email" name="email" placeholder="Email" required />
+      <input type="text" name="message" placeholder="Message" required />
+      <button type="submit">Submit</button>
+    </form>
+    <script>
+      function onSubmit(event) {
+        event.preventDefault();
+        alert("Thank you, your message has been received!");
+      }
+    </script>
   </body>
-
 </html>
