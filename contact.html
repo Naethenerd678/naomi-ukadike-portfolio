@@ -26,7 +26,9 @@
     </form>
     <script>
       function onSubmit(event) {
+        //this prevents the page from refreshing
         event.preventDefault();
+        // this shows a popup when submitted; I will refactor this to be a nicer message.
         alert("Thank you, your message has been received!");
       }
     </script>
